@@ -7,7 +7,7 @@
 #include <unistd.h>
 #include <ctype.h>    
 
-//  isdigit fonksiyonu	Karakterin sayı olup olmadığını sınar kontrol şeklinde FONKSİYON oluşturma nedenimiz bu.
+//  isdigit fonksiyonu	Karakterin sayÄ± olup olmadÄ±ÄŸÄ±nÄ± sÄ±nar kontrol ÅŸeklinde FONKSÄ°YON oluÅŸturma nedenimiz bu.
 
 
 using namespace std;
@@ -39,32 +39,32 @@ void ogrenciekle(int a)
 	a = 1;
 	
 	int i=0,u;                
- /* kullanıcıdan aldığım bilgileri önceden Pointerlar sayesinde bellekte ayırmış olduğım alanda tuttum ve daha sonra dosyaya yazdırdım. */
+ /* kullanÄ±cÄ±dan aldÄ±ÄŸÄ±m bilgileri Ã¶nceden Pointerlar sayesinde bellekte ayÄ±rmÄ±ÅŸ olduÄŸÄ±m alanda tuttum ve daha sonra dosyaya yazdÄ±rdÄ±m. */
 	char *p,*c;                 
 	float *asb;
 	p=(char*)malloc((sizeof(char)*20)*4);
 	c=(char*)malloc((sizeof(char)*20)*3);
 	asb=(float*)calloc(sizeof(float),3);
 	
-			printf("\n\n\nÖğrencinin Fakültesi :  ");
+			printf("\n\n\nÃ–ÄŸrencinin FakÃ¼ltesi :  ");
 			scanf("%s",p);
-			printf("\nÖğrencinin Okuduğu Bölüm :  ");
+			printf("\nÃ–ÄŸrencinin OkuduÄŸu BÃ¶lÃ¼m :  ");
 			scanf("%s",p+20);	
-			printf("\nÖğrencinin Adını Giriniz :  ");
+			printf("\nÃ–ÄŸrencinin AdÄ±nÄ± Giriniz :  ");
 			scanf("%s",p+40);
-			printf("\nÖğrencinin Soy Adını Giriniz :  ");
+			printf("\nÃ–ÄŸrencinin Soy AdÄ±nÄ± Giriniz :  ");
 			scanf("%s",p+60);
 			
 			
-			printf("\nÖğrencinin Numarasını Giriniz :  ");
+			printf("\nÃ–ÄŸrencinin NumarasÄ±nÄ± Giriniz :  ");
 			
 			scanf("%s",c);while(kontrol(c)==0){printf("\t* Lutfen Gecerli Deger Giriniz :"); scanf("%s",c);}
 			
-			printf("\nÖğrencinin T.C Kimlik Numarasını Giriniz :  ");
+			printf("\nÃ–ÄŸrencinin T.C Kimlik NumarasÄ±nÄ± Giriniz :  ");
 			
 			scanf("%s",c+20);while(kontrol(c+20)==0){printf("\t* Lutfen Gecerli Deger Giriniz :"); scanf("%s",c+20);}
 			
-			printf("\nÖğrecinin Okumakta Olduğu Sınıf (1-2-3-4) :  ");
+			printf("\nÃ–ÄŸrecinin Okumakta OlduÄŸu SÄ±nÄ±f (1-2-3-4) :  ");
 			
 			scanf("%s",c+40); while(kontrol(c+40)==0) {printf("\t* Lutfen Gecerli Deger Giriniz :"); scanf("%s",c+40);}                        	
 
@@ -77,14 +77,14 @@ void ogrenciekle(int a)
 	if((fp=fopen("OgrenciKayit.txt","a"))!=0)
 	{
 	
-	/*Uygulamada ilk süslü parantezlerde klavyeden bir yazı enter tuşuna basıldıktan sonra strupr fonksiyonu ile büyük harf yapılır.  */
+	/*Uygulamada ilk sÃ¼slÃ¼ parantezlerde klavyeden bir yazÄ± enter tuÅŸuna basÄ±ldÄ±ktan sonra strupr fonksiyonu ile bÃ¼yÃ¼k harf yapÄ±lÄ±r.  */
 	printf("\n\t%s\t%s\t%s\t%s\t%.f\t%.f\t%.f\t",strupr(p),strupr(p+20),strupr(p+40),strupr(p+60),*(asb),*(asb+1),*(asb+2));
     fprintf(fp,"\t%s\t%s\t%s\t%s\t%.0f\t%.0f\t%.0f\t\n",strupr(p),strupr(p+20),strupr(p+40),strupr(p+60),*(asb),*(asb+1),*(asb+2));
 	fflush(fp);fclose(fp);
-	/*fflush normalde herhangi bir dosya işlemi sırasında klavyeden alınarak tampona yüklenmiş girdileri kendisine parametre olarak 
-	verilen FILE* türünden işaretçi ile ilişkili olan dosyaya yazar ve klavyeden alınmış bilgileri tampondan siler. */
+	/*fflush normalde herhangi bir dosya iÅŸlemi sÄ±rasÄ±nda klavyeden alÄ±narak tampona yÃ¼klenmiÅŸ girdileri kendisine parametre olarak 
+	verilen FILE* tÃ¼rÃ¼nden iÅŸaretÃ§i ile iliÅŸkili olan dosyaya yazar ve klavyeden alÄ±nmÄ±ÅŸ bilgileri tampondan siler. */
 	sleep(1.2);
-	printf("\n\n\n\t Öğrenci Başarıyla Eklendi :)) )");
+	printf("\n\n\n\t Ã–ÄŸrenci BaÅŸarÄ±yla Eklendi :)) )");
 	system("cls");
 	  
 	}
@@ -98,8 +98,8 @@ void ogrencisil()
 {		
 	/*	int silinen;
 		char sil[10];
-	 	printf("\n\nÖğrencinin Bilgilerini Silmek İstiyorsanız\n");
-        printf("Öğrencinin T.C Kimlik Numarasını Giriniz :  ");
+	 	printf("\n\nÃ–ÄŸrencinin Bilgilerini Silmek Ä°stiyorsanÄ±z\n");
+        printf("Ã–ÄŸrencinin T.C Kimlik NumarasÄ±nÄ± Giriniz :  ");
         scanf("%s",&sil);
         printf("\t***  Silinecek Arac Numarasi  :  ");scanf("%s",sil);while(kontrol(sil)==0 || atoi(sil)<0 ||atoi(sil)>a)
 		{
@@ -114,7 +114,7 @@ void ogrencilistele()
       FILE *fp;
    		int c;
   	 	fp = fopen("OgrenciKayit.txt","r");
-   if (fp == NULL) printf("Kayıt Yeri Bulunamamıştır :(  )\n");
+   if (fp == NULL) printf("KayÄ±t Yeri BulunamamÄ±ÅŸtÄ±r :(  )\n");
    else {
      do {
        c = getc(fp);    /* Bir karakter oku  */
@@ -128,35 +128,35 @@ int main() {
 	
 	setlocale(LC_ALL, "Turkish");
 	system("color 0C");
-	int secim; //menü seçimleri için kullanılan değişken  *******  normalde char olarak tanımladım fakat  harf veri girişinden sonra sürekli aynı değeri döndürdü o yüzden integer'a çeviriyorum hocam
+	int secim; //menÃ¼ seÃ§imleri iÃ§in kullanÄ±lan deÄŸiÅŸken  *******  normalde char olarak tanÄ±mladÄ±m fakat  harf veri giriÅŸinden sonra sÃ¼rekli aynÄ± deÄŸeri dÃ¶ndÃ¼rdÃ¼ o yÃ¼zden integer'a Ã§eviriyorum hocam
 do{
-	printf("\n\n\n\n\n\t\t\t\t\t***** ÖĞRENCİ İŞLEMLERİ ***** ");
+	printf("\n\n\n\n\n\t\t\t\t\t***** Ã–ÄRENCÄ° Ä°ÅLEMLERÄ° ***** ");
 	sleep(1.2);
 	system("cls");
-	printf("Öğrenci Kayıt Sistemine Hoşgeldiniz\n");
+	printf("Ã–ÄŸrenci KayÄ±t Sistemine HoÅŸgeldiniz\n");
 	for(int i = 0; i < 35; i++){printf("-");}
 	
 		
-	printf("\nLütfen Yapmak İstediğiniz İşlemi Seçiniz\n");
-	printf("\nÖğrenci Kayıt : 1");
-	printf("\nÖğrenci Kayıt Silme : 2 (((hocam bazı hatalar oluştu yollamadan önce kontrol ederken 2. seçenekte)))");
-	printf("\nÖğrenci Kayıt İşlem Listesi : 3");
-	printf("\nÇıkış İşlemi İçin : 0\n");
-	printf("\nLütfen Seçiminiz Yapınız:");
+	printf("\nLÃ¼tfen Yapmak Ä°stediÄŸiniz Ä°ÅŸlemi SeÃ§iniz\n");
+	printf("\nÃ–ÄŸrenci KayÄ±t : 1");
+	printf("\nÃ–ÄŸrenci KayÄ±t Silme : 2");
+	printf("\nÃ–ÄŸrenci KayÄ±t Ä°ÅŸlem Listesi : 3");
+	printf("\nÃ‡Ä±kÄ±ÅŸ Ä°ÅŸlemi Ä°Ã§in : 0\n");
+	printf("\nLÃ¼tfen SeÃ§iminiz YapÄ±nÄ±z:");
 	scanf("%d",&secim);
 
-if(secim == 1) //öğrenci kayıt seçimi kod satırları
+if(secim == 1) //Ã¶ÄŸrenci kayÄ±t seÃ§imi kod satÄ±rlarÄ±
 	   {
 	   		int x;
 	   		system("cls");
-			printf("\n\n\n\n\n\t\t\t\t\t***** ÖĞRENCİ KAYIT ***** ");
+			printf("\n\n\n\n\n\t\t\t\t\t***** Ã–ÄRENCÄ° KAYIT ***** ");
 			sleep(1.2);
 			system("cls");
 			for(int i = 0; i < 35; i++){printf("-");}
-			printf("\n\n\n\t\tKayıt İşleminin Düzgün Bir Şekilde Gerçekleşebilmesi İçin \n\t\tLütfen Türkçe Karakterler Kullanmayınız  \n\t\t(***(Ö ö -- Ç ç -- İ ı -- Ü ü -- Ğ ğ -- Ş ş)***)\n\n\n");
+			printf("\n\n\n\t\tKayÄ±t Ä°ÅŸleminin DÃ¼zgÃ¼n Bir Åekilde GerÃ§ekleÅŸebilmesi Ä°Ã§in \n\t\tLÃ¼tfen TÃ¼rkÃ§e Karakterler KullanmayÄ±nÄ±z  \n\t\t(***(Ã– Ã¶ -- Ã‡ Ã§ -- Ä° Ä± -- Ãœ Ã¼ -- Ä ÄŸ -- Å ÅŸ)***)\n\n\n");
 		
 			ogrenciekle(x);
-			printf("\n\n\n\n::KAYIT İŞLEMİ YAPILMIŞTIR::\n\nANA MENÜYE GERİ DÖNÜLÜYOR...");
+			printf("\n\n\n\n::KAYIT Ä°ÅLEMÄ° YAPILMIÅTIR::\n\nANA MENÃœYE GERÄ° DÃ–NÃœLÃœYOR...");
 			sleep(3);		
 			system("cls");
 			
@@ -178,22 +178,22 @@ if(secim == 2){
 if(secim == 3){
 	
 	system("Cls");
-	printf("\tFAKÜLTE _ BÖLÜM _ AD _ SOYAD _ ÖĞRENCİ NO _ TC NO _ SINIF NO\n\n\n");
+	printf("\tFAKÃœLTE _ BÃ–LÃœM _ AD _ SOYAD _ Ã–ÄRENCÄ° NO _ TC NO _ SINIF NO\n\n\n");
 	ogrencilistele();
 	sleep(5);
 	system("cls");
 			}
 
-if ((secim != 1) && (secim != 2) && (secim != 3) && (secim != 0)) { // sistemin tercihleri dışındaki girişleri tespit için kod satırı sadece (( İNTEGER DEĞERLER İÇİN ))
+if ((secim != 1) && (secim != 2) && (secim != 3) && (secim != 0)) { // sistemin tercihleri dÄ±ÅŸÄ±ndaki giriÅŸleri tespit iÃ§in kod satÄ±rÄ± sadece (( Ä°NTEGER DEÄERLER Ä°Ã‡Ä°N ))
 			system("cls");
-			printf(" HATALI SEÇİM\n ");
+			printf(" HATALI SEÃ‡Ä°M\n ");
 			system("pause");
 			system("cls");
 		}
 	} while (secim != 0);
 	system("cls");
 	
-	printf(" PROGRAMDAN ÇIKILMIŞTIR. \n ");
+	printf(" PROGRAMDAN Ã‡IKILMIÅTIR. \n ");
 	system("pause");
 	return 0;
 
